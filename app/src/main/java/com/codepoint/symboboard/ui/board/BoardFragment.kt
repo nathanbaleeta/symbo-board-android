@@ -1,4 +1,4 @@
-package com.codepoint.symboboard.ui.dashboard
+package com.codepoint.symboboard.ui.board
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.codepoint.symboboard.R
 
-class DashboardFragment : Fragment() {
+class BoardFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    private lateinit var boardViewModel: BoardViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-            ViewModelProviders.of(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(this, Observer {
+        boardViewModel =
+            ViewModelProviders.of(this).get(BoardViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_board, container, false)
+        val textView: TextView = root.findViewById(R.id.text_board)
+        boardViewModel.text.observe(this, Observer {
             textView.text = it
         })
         return root
