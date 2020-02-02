@@ -3,30 +3,62 @@ package com.codepoint.symboboard
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
+import androidx.fragment.app.Fragment
+import com.codepoint.symboboard.fragments.*
 
 class MainActivity : AppCompatActivity() {
+
+
+    private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        when (item.itemId) {
+            R.id.navigation_home -> {
+
+                val profileFragment = ProfileFragment.newInstance()
+                openFragment(profileFragment)
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.navigation_board -> {
+
+                val profileFragment = ProfileFragment.newInstance()
+                openFragment(profileFragment)
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.navigation_settings -> {
+
+                val profileFragment = ProfileFragment.newInstance()
+                openFragment(profileFragment)
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.navigation_profile -> {
+
+                val profileFragment = ProfileFragment.newInstance()
+                openFragment(profileFragment)
+                return@OnNavigationItemSelectedListener true
+            }
+        }
+        false
+    }
+
+    private fun openFragment(fragment: Fragment) {
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.container, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
-        val navController = findNavController(R.id.nav_host_fragment)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home,
-                R.id.navigation_board,
-                R.id.navigation_settings,
-                R.id.navigation_profile
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        // Set default BottomNavigationView tab
+        val profileFragment = ProfileFragment.newInstance()
+        openFragment(profileFragment)
+
+        navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+
+
     }
 }
