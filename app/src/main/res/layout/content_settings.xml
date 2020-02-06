@@ -23,7 +23,7 @@
             android:padding="@dimen/settings_horizontal_margin">
 
             <ImageView
-                android:id="@+id/ivContactItem1"
+                android:id="@+id/ivLanguage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -31,11 +31,11 @@
                 android:src="@drawable/ic_language_black_24dp" />
 
             <TextView
-                android:id="@+id/tvNumber1"
+                android:id="@+id/tvLanguage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/settings_horizontal_margin"
-                android:layout_toEndOf="@id/ivContactItem1"
+                android:layout_toEndOf="@id/ivLanguage"
                 android:text="Language"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="#212121" />
@@ -43,11 +43,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tvNumber1"
+                android:layout_below="@id/tvLanguage"
                 android:layout_marginStart="@dimen/settings_horizontal_margin"
                 android:layout_marginTop="4dp"
-                android:layout_toEndOf="@id/ivContactItem1"
-                android:text="Tongues, Dialects, Lingo"
+                android:layout_toEndOf="@id/ivLanguage"
+                android:text="Locale, Pitch, Speech rate"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="#727272" />
 
@@ -62,7 +62,7 @@
             android:padding="@dimen/settings_horizontal_margin">
 
             <ImageView
-                android:id="@+id/ivContactItem2"
+                android:id="@+id/ivSpeech"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -70,11 +70,11 @@
                 android:src="@drawable/ic_speech_black_24dp" />
 
             <TextView
-                android:id="@+id/tvNumber2"
+                android:id="@+id/tvSpeech"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/settings_horizontal_margin"
-                android:layout_toEndOf="@id/ivContactItem2"
+                android:layout_toEndOf="@id/ivSpeech"
                 android:text="Speech"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="#212121" />
@@ -82,10 +82,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tvNumber2"
+                android:layout_below="@id/tvSpeech"
                 android:layout_marginStart="@dimen/settings_horizontal_margin"
                 android:layout_marginTop="4dp"
-                android:layout_toEndOf="@id/ivContactItem2"
+                android:layout_toEndOf="@id/ivSpeech"
                 android:text="Voice, Recordings"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="#727272" />
@@ -104,7 +104,7 @@
             android:padding="@dimen/settings_horizontal_margin">
 
             <ImageView
-                android:id="@+id/ivContactItem4"
+                android:id="@+id/ivExport"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -112,11 +112,11 @@
                 android:src="@drawable/ic_file_upload_black_24dp" />
 
             <TextView
-                android:id="@+id/tvNumber4"
+                android:id="@+id/tvExport"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/settings_horizontal_margin"
-                android:layout_toEndOf="@id/ivContactItem4"
+                android:layout_toEndOf="@id/ivExport"
                 android:text="Export"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="#212121" />
@@ -124,10 +124,50 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tvNumber4"
+                android:layout_below="@id/tvExport"
                 android:layout_marginStart="@dimen/settings_horizontal_margin"
                 android:layout_marginTop="4dp"
-                android:layout_toEndOf="@id/ivContactItem4"
+                android:layout_toEndOf="@id/ivExport"
+                android:text="Boards, Tiles"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#727272" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="@dimen/settings_horizontal_margin">
+
+            <ImageView
+                android:id="@+id/ivImport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/settings_horizontal_margin"
+                android:src="@drawable/ic_file_download_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvImport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/settings_horizontal_margin"
+                android:layout_toEndOf="@id/ivImport"
+                android:text="Import"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvImport"
+                android:layout_marginStart="@dimen/settings_horizontal_margin"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@id/ivImport"
                 android:text="Boards, Tiles"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="#727272" />

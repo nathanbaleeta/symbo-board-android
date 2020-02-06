@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.navigation_board -> {
 
-                val profileFragment = ProfileFragment.newInstance()
-                openFragment(profileFragment)
+                val boardsFragment = BoardsFragment.newInstance()
+                openFragment(boardsFragment)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_settings -> {
